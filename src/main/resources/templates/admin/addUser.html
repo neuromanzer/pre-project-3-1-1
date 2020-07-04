@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" th:href="@{/css/appStyle.css}"/>
+    <title>Add New User</title>
+</head>
+<body>
+<h1>Add New User</h1>
+<form action="#" th:action="@{/admin/add}" th:object="${user}" method="post">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="text" th:field="*{password}"/></td>
+        </tr>
+        <tr>
+            <td>Role:</td>
+            <td><input type="text" th:field="*{roles}"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Add</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<h3><a href="/admin">Admin Page</a></h3>
+<p>
+<td><a href="/logout">Logout</a></td>
+<p>
+</body>
+</html>
